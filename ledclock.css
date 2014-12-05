@@ -1,0 +1,207 @@
+#clock{
+    width:370px;
+    padding:40px;
+    margin:200px 300px 50px;
+    position:relative;
+}
+
+#clock .display{
+    text-align:center;
+    padding: 40px 20px 20px;
+    border-radius:6px;
+    position:relative;
+    height: 54px;
+    margin-left: 50%;
+    margin-right: 50%
+}
+
+#clock .display{
+    background-color: lightgray;
+    width: 500px;
+    height: 100px;
+}
+
+#clock .meridiem {
+    font-family: monospace;
+    position: relative;
+    text-align: center;
+}
+#clock .digits div span {
+    background-color: black;
+    border-color: black;
+}
+
+#clock .digits div span {
+    opacity: 0;
+    position: absolute;
+}
+
+#clock .digits .l1 {
+    height:4px;
+    width:16px;
+    top:0;
+    left:5px;
+}
+
+#clock .digits .l2 {
+    height: 4px;
+    width: 16px;
+    top: 23px;
+    left: 5px;
+}
+
+#clock .digits .l3 {
+    height: 4px;
+    width: 16px;
+    top: 45px;
+    left: 5px;
+}
+
+#clock .digits .l4 {
+    height: 15px;
+    width: 4px;
+    top: 6px;
+    left: 0px;
+}
+
+#clock .digits .l5 {
+    height: 15px;
+    width: 4px;
+    top: 6px;
+    right:0px
+}
+
+#clock .digits .l6 {
+    height: 16px;
+    width: 4px;
+    top: 29px;
+    left: 0px;
+}
+
+#clock .digits .l7 {
+    height: 15px;
+    width: 4px;
+    top: 30px;
+    right:0px;
+}
+#clock .digits div {
+    text-align: left;
+    position: relative;
+    width: 25px;
+    height: 50px;
+    display: inline-block;
+    margin: 0 4px;
+}
+
+#clock .meridiem div {
+    width: 10px;
+    height: 10px;
+    position: relative;
+}
+
+#clock .digits .c1 {
+    height: 4px;
+    width: 4px;
+    top: 6px;
+    right:0px
+}
+
+#clock .digits .c2 {
+    height: 4px;
+    width: 4px;
+    top: 30px;
+    right:0px;
+}
+
+
+/*num-0*/
+#clock .digits div.num-0 .l1,
+#clock .digits div.num-0 .l3,
+#clock .digits div.num-0 .l4,
+#clock .digits div.num-0 .l5,
+#clock .digits div.num-0 .l6,
+#clock .digits div.num-0 .l7 {
+    opacity: 1;
+}
+
+/*num-1*/
+#clock .digits div.num-1 .l5,
+#clock .digits div.num-1 .l7 {
+    opacity: 1;
+}
+/*num-1*/
+#clock .digits div.num-2 .l1,
+#clock .digits div.num-2 .l2,
+#clock .digits div.num-2 .l3,
+#clock .digits div.num-2 .l5,
+#clock .digits div.num-2 .l6 {
+    opacity: 1;
+}
+
+/*num-3*/
+#clock .digits div.num-3 .l1,
+#clock .digits div.num-3 .l2,
+#clock .digits div.num-3 .l3,
+#clock .digits div.num-3 .l5,
+#clock .digits div.num-3 .l7 {
+    opacity: 1;
+}
+
+/*num-4*/
+#clock .digits div.num-4 .l2,
+#clock .digits div.num-4 .l4,
+#clock .digits div.num-4 .l5,
+#clock .digits div.num-4 .l7 {
+    opacity: 1;
+}
+
+/*num-5*/
+#clock .digits div.num-5 .l1,
+#clock .digits div.num-5 .l2,
+#clock .digits div.num-5 .l3,
+#clock .digits div.num-5 .l4,
+#clock .digits div.num-5 .l7 {
+    opacity: 1;
+}
+
+/*num-6*/
+#clock .digits div.num-6 .l1,
+#clock .digits div.num-6 .l2,
+#clock .digits div.num-6 .l3,
+#clock .digits div.num-6 .l4,
+#clock .digits div.num-6 .l6,
+#clock .digits div.num-6 .l7 {
+    opacity: 1;
+}
+
+/*num-7*/
+#clock .digits div.num-7 .l1,
+#clock .digits div.num-7 .l5,
+#clock .digits div.num-7 .l7 {
+    opacity: 1;
+}
+
+/*num-8*/
+#clock .digits div.num-8 .l1,
+#clock .digits div.num-8 .l2,
+#clock .digits div.num-8 .l3,
+#clock .digits div.num-8 .l4,
+#clock .digits div.num-8 .l5,
+#clock .digits div.num-8 .l6,
+#clock .digits div.num-8 .l7 {
+    opacity: 1;
+}
+
+/*num-9*/
+#clock .digits div.num-9 .l1,
+#clock .digits div.num-9 .l2,
+#clock .digits div.num-9 .l4,
+#clock .digits div.num-9 .l5,
+#clock .digits div.num-9 .l7 {
+    opacity: 1;
+}
+
+/*clock colon*/
+#clock .digits div.colon .c1,
+#clock .digits div.colon .c2 {
+    opacity: 1;
