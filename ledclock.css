@@ -1,23 +1,21 @@
-#clock{
-    width:370px;
-    padding:40px;
-    margin:200px 300px 50px;
-    position:relative;
+#clock {
+    width: 455px;
+    padding: 40px;
+    position: relative;
+    background-color: pink;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#clock .display{
-    text-align:center;
+#clock .display {
+    text-align: center;
     padding: 40px 20px 20px;
-    border-radius:6px;
-    position:relative;
-    height: 54px;
-    margin-left: 50%;
-    margin-right: 50%
-}
-
-#clock .display{
+    border-radius: 6px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     background-color: lightgray;
-    width: 500px;
+    width: 415px;
     height: 100px;
 }
 
@@ -36,59 +34,75 @@
     position: absolute;
 }
 
+.l1:before{	border-width:0 5px 5px 0;border-right-color:inherit;left:-5px;}
+
 #clock .digits .l1 {
-    height:4px;
-    width:16px;
-    top:0;
-    left:5px;
+    height: 4px;
+    width: 15px;
+    top: 0;
+    left: 5px;
+    border-width: 0 0 5px 5px;
+}
+
+#clock .digits .l1::before{
+    border-width:0 5px 5px 0;
+    border-right-color:inherit;
+    left:-5px;
+}
+
+#clock .digits .l1::after{
+    border-width:0 0 5px 5px;
+    border-left-color:inherit;
+    right:-5px;
 }
 
 #clock .digits .l2 {
     height: 4px;
-    width: 16px;
-    top: 23px;
+    width: 15px;
+    top: 24px;
     left: 5px;
 }
 
 #clock .digits .l3 {
     height: 4px;
-    width: 16px;
-    top: 45px;
+    width: 15px;
+    top: 48px;
     left: 5px;
 }
 
 #clock .digits .l4 {
-    height: 15px;
+    height: 18px;
     width: 4px;
-    top: 6px;
+    top: 5px;
     left: 0px;
 }
 
 #clock .digits .l5 {
-    height: 15px;
+    height: 18px;
     width: 4px;
-    top: 6px;
-    right:0px
+    top: 5px;
+    right: 0px;
 }
 
 #clock .digits .l6 {
-    height: 16px;
+    height: 18px;
     width: 4px;
     top: 29px;
     left: 0px;
 }
 
 #clock .digits .l7 {
-    height: 15px;
+    height: 18px;
     width: 4px;
-    top: 30px;
-    right:0px;
+    top: 29px;
+    right: 0px;
 }
+
 #clock .digits div {
     text-align: left;
     position: relative;
     width: 25px;
-    height: 50px;
+    height: 52px;
     display: inline-block;
     margin: 0 4px;
 }
@@ -112,7 +126,6 @@
     top: 30px;
     right:0px;
 }
-
 
 /*num-0*/
 #clock .digits div.num-0 .l1,
