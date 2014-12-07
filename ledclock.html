@@ -7,8 +7,9 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
     <script src="chosen.jquery.min.js"></script>
-    <link rel="stylesheet" href="chosen.css"></script>
+    <link rel="stylesheet" href="chosen.css">
     <script src="ledclock.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="ledclock.css" />
 </head>
 <body class ="bodyclock">
@@ -18,20 +19,20 @@
     <div id="clock">
         <div class="display">
             <div class="weekdays">
-                <span id="monday">MON</span>
-                <span id="tuesday">TUE</span>
-                <span id="wednesday">WED</span>
-                <span id="thursday">THU</span>
-                <span id="friday">FRI</span>
-                <span id="saturday">SAT</span>
-                <span id="sunday">SUN</span>
+                <span id="monday" class="day">MON</span>
+                <span id="tuesday" class="day">TUE</span>
+                <span id="wednesday" class="day">WED</span>
+                <span id="thursday" class="day">THU</span>
+                <span id="friday" class="day">FRI</span>
+                <span id="saturday" class="day">SAT</span>
+                <span id="sunday" class="day">SUN</span>
             </div>
         <div class="meridiem">
             <div id ="meridiemAMPM">
                 <span id="AMPM" class="AMPM"></span>
             </div>
         </div>
-            <div class="alarmicon"></div>
+            <div class="alarmicon"><i class="fa fa-bell-o"></i></div>
             <div class="digits">
                 <div id="digit-0" class="num-0">
                     <span class="l1"></span>
