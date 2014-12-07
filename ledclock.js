@@ -10,7 +10,37 @@ function setDigit(position, digit) {
 
 $ ( function (){
     updateTime();
+    $(".chosen-select").chosen({max_selected_options: 5});
+
+    $(".stopAlarm").click(function() {
+        console.log('clicked!');
+        $('#alarmSound').get(0).pause();
+        return false;
+    });
+
+    $('.saveAlarm').click(function(){
+        console.log('clicked!');
+        userAlarmTime.push(getUserAlarm());
+        return false;
+
+    });
+
 });
+
+function renderAlarms() {
+    var html;
+
+    html += "<ul>";
+    userAlarmTime.forEach(function(alarmTime, index){
+        html += "<li>" + alarmTime + "</li>"
+    });
+    html += "</ul>"
+
+    $('')
+}
+
+var userAlarmTime = [];
+
 
 function setAM(){
     $('#AMPM').html("AM");
@@ -28,9 +58,14 @@ function updateTime() {
         setDigit(i, now[i]);
     }
     toggleMeridiem(now[7]);
-    // if moment returns AM, setAM()
-    // else setPM()
+
+        for (i=0; i < userAlarmTime.length; i++) {
+            if (now === userAlarmTime[i]) {
+                $('#alarmSound').get(0).play();
+            }
+        }
 }
+
 
 window.setInterval(function (){
     updateTime();
@@ -43,3 +78,22 @@ function toggleMeridiem(a) {
         setPM();
     }
 }
+
+// poops out a string with the format 'hhmmss a'
+function getUserAlarm() {
+    var userHour = $('#alarmHour').val();
+    var userMinute = $('#alarmMinute').val();
+    var userMeridiem = $('#alarmMeridiem').val();
+
+    var alarmTime = userHour + userMinute + "00" + " " + userMeridiem;
+
+    return alarmTime;
+}
+
+    //
+
+function setAlarm() {
+    $('#')
+}
+
+// if now is equal to alarm time, pop an alert box

@@ -117,7 +117,7 @@
     height: 4px;
     width: 4px;
     top: 6px;
-    right:0px
+    right:0px;
 }
 
 #clock .digits .c2 {
@@ -125,6 +125,28 @@
     width: 4px;
     top: 30px;
     right:0px;
+}
+
+.alarmDiv {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 386px;
+    padding: 10px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.chosent-select {
+    width: 75px;
+}
+
+.saveAlarm {
+    padding: 6px;
+}
+
+.stopAlarm {
+    padding: 6px;
 }
 
 /*num-0*/
