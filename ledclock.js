@@ -27,19 +27,19 @@ $ ( function (){
 
 });
 
+var userAlarmTime = [];
+
 function renderAlarms() {
     var html;
 
-    html += "<ul>";
+    html = "<ul>";
     userAlarmTime.forEach(function(alarmTime, index){
         html += "<li>" + alarmTime + "</li>"
     });
-    html += "</ul>"
+    html += "</ul>";
 
-    $('')
+    $('#alarmSaves').html(html);
 }
-
-var userAlarmTime = [];
 
 
 function setAM(){
