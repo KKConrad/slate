@@ -15,16 +15,16 @@ $ ( function (){
     $(".stopAlarm").click(function() {
         console.log('clicked!');
         $('#alarmSound').get(0).pause();
+        $('#alarmicon').removeClass('fa-bell-o').addClass('fa-bell-slash-o');
         return false;
     });
 
     $('.saveAlarm').click(function(){
         console.log('clicked!');
         userAlarmTime.push(getUserAlarm());
+        $('#alarmicon').removeClass('fa-bell-slash-o').addClass('fa-bell-o');
         return false;
-
     });
-
 });
 
 var userAlarmTime = [];

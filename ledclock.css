@@ -8,6 +8,10 @@
     border-radius: 73px;
     margin-top: 5%;
 }
+
+.bodyclock {
+    background-color: lightblue;
+}
 #clock .display {
     text-align: center;
     padding: 20px 20px 20px;
@@ -21,11 +25,26 @@
     -webkit-box-shadow: 0 0 11px 0px #000 inset;
 }
 
-#clock .meridiem {
-    font-family: monospace;
+#clock .meridiem div {
+    width: 10px;
+    height: 10px;
     position: relative;
-    text-align: center;
+    float: right;
+    margin-top: 40px;
+    margin-right: 10px;
+    margin-left: -20px;
+    font-family: monospace;
+    font-size: 15px;
 }
+
+.alarmicon {
+    position: absolute;
+    margin-top: 37px;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+}
+
 #clock .digits div span {
     background-color: black;
     border-color: black;
@@ -46,12 +65,22 @@
 
 .day {
     padding: 7px;
+    color: darkgray;
 }
 
-.l1:before{	border-width:0 5px 5px 0;border-right-color:inherit;left:-5px;}
+/*.l1:before{	border-width:0 5px 5px 0;border-right-color:inherit;left:-5px;}*/
+
+#clock .digits div span:before,
+#clock .digits div span:after{
+    content:'';
+    position:absolute;
+    width:0;
+    height:0;
+    border:5px solid transparent;
+}
 
 #clock .digits .l1 {
-    height: 4px;
+    height: 5px;
     width: 15px;
     top: 0;
     left: 5px;
@@ -71,36 +100,73 @@
 }
 
 #clock .digits .l2 {
-    height: 4px;
+    height: 5px;
     width: 15px;
     top: 24px;
     left: 5px;
 }
 
+#clock .digits .l2::before{
+    border-width: 3px 5px 2px 0;
+    border-right-color: inherit;
+    left: -5px;
+}
+
+#clock .digits .l2::after{
+    border-width: 2px 1px 3px 4px;
+    border-left-color: inherit;
+    right: -5px;
+}
+
 #clock .digits .l3 {
-    height: 4px;
+    height: 5px;
     width: 15px;
     top: 48px;
     left: 5px;
 }
 
+#clock .digits .l3::before{
+    border-width:5px 5px 0 0;
+    border-right-color:inherit;
+    left:-5px;
+}
+
+#clock .digits .l3::after{
+    border-width: 5px 0 0 5px;
+    border-left-color:inherit;
+    right:-5px;
+}
+
 #clock .digits .l4 {
-    height: 18px;
-    width: 4px;
-    top: 5px;
+    height: 17px;
+    width: 5px;
+    top: 6px;
     left: 0px;
 }
 
+#clock .digits .l4::before{
+    border-width: 5px 5px 0 0;
+    border-top-color: inherit;
+    top: 17px;
+    left: 0;
+}
+
+#clock .digits .l4::after{
+    border-width: 5px 0 0 5px;
+    border-left-color: inherit;
+    top: -5px;
+}
+
 #clock .digits .l5 {
-    height: 18px;
-    width: 4px;
-    top: 5px;
+    height: 17px;
+    width: 5px;
+    top: 6px;
     right: 0px;
 }
 
 #clock .digits .l6 {
-    height: 18px;
-    width: 4px;
+    height: 17px;
+    width: 5px;
     top: 29px;
     left: 0px;
 }
@@ -119,16 +185,6 @@
     height: 52px;
     display: inline-block;
     margin: 0 4px;
-}
-
-#clock .meridiem div {
-    width: 10px;
-    height: 10px;
-    position: relative;
-    float: right;
-    margin-top: 41px;
-    margin-right: 10px;
-    margin-left: -20px;
 }
 
 #clock .digits .c1 {
