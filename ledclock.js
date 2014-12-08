@@ -38,6 +38,10 @@ $ ( function (){
 
     $('.saveAlarm').click(function(){
         console.log('clicked!');
+        if (userAlarmTime.length > 4) {
+            alert('sorry, too many cooks! (alarms)');
+            return false;
+        }
         userAlarmTime.push(getUserAlarm());
         $('#alarmicon').removeClass('fa-bell-slash-o').addClass('fa-bell-o');
         renderAlarms();

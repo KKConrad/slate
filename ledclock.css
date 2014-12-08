@@ -79,6 +79,26 @@
     font-weight: bold;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+#alarmKeeper li {
+    background-color: lightgrey;
+    border-radius: 10px;
+    margin: 10px;
+    width: 225px;
+    text-align: right;
+    margin-left: 70px;
+}
+
+.deleteAlarm {
+    margin-left: 60px;
+}
+
 #clock .digits div {
     text-align: left;
     position: relative;
@@ -86,7 +106,7 @@
     height: 59px;
     display: inline-block;
     top: 2px;
-    right: -11px;
+    right: -10px;
 }
 
 #clock .digits div span:before,
@@ -270,6 +290,7 @@
     border-radius: 8px;
     text-align: center;
     font-family: monospace;
+    font-size: 20px;
     padding: 5px;
     margin-top: 8px;
 }
