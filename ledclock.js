@@ -49,14 +49,26 @@ var userAlarmTime = [];
 
 function renderAlarms() {
     var html;
-
-    html = "<ul>";
+    html = "Your Alarms!";
+    html += "<ul>";
     userAlarmTime.forEach(function(alarmTime, index){
-        html += "<li>" + alarmTime + "</li>"
+        html += "<li>" + alarmTime.humanizedTime + "<button class='deleteAlarm'>X</button>" + "</li>"
     });
     html += "</ul>";
 
     $('#alarmKeeper').html(html);
+
+    $('.deleteAlarm').click(function() {
+        console.log("clicked~");
+        delete_alarm();
+        return false;
+    });
+}
+
+function delete_alarm(index){
+    console.log(index);
+    userAlarmTime.splice(index, 1);
+    renderAlarms();
 }
 
 function updateTime() {
@@ -67,7 +79,7 @@ function updateTime() {
     toggleMeridiem(now[7]);
 
         for (i=0; i < userAlarmTime.length; i++) {
-            if (now === userAlarmTime[i]) {
+            if (now === userAlarmTime[i].momentTime) {
                 $('#alarmSound').get(0).play();
             }
         }
@@ -88,21 +100,25 @@ function toggleMeridiem(a) {
     }
 }
 
-// poops out a string with the format 'hhmmss a'
 function getUserAlarm() {
     var userHour = $('#alarmHour').val();
     var userMinute = $('#alarmMinute').val();
     var userMeridiem = $('#alarmMeridiem').val();
 
     var alarmTime = userHour + userMinute + "00" + " " + userMeridiem;
+    var peopleTime = userHour + ":" + userMinute + userMeridiem;
     if (userHour === "" || userMinute === "" || userMeridiem === "") {
         alert('Please put in a completed alarm time, thanks! :D ');
         removeClass('a-bell-slash-o');
     }
-    return alarmTime;
-}
 
-    //
+    var objectTime = {
+        momentTime: alarmTime,
+        humanizedTime: peopleTime
+    };
+
+    return objectTime;
+}
 
 function setAlarm() {
     $('#')
