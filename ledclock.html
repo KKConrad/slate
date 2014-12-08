@@ -19,13 +19,13 @@
     <div id="clock">
         <div class="display">
             <div class="weekdays">
-                <span id="monday" class="day">MON</span>
-                <span id="tuesday" class="day">TUE</span>
-                <span id="wednesday" class="day">WED</span>
-                <span id="thursday" class="day">THU</span>
-                <span id="friday" class="day">FRI</span>
-                <span id="saturday" class="day">SAT</span>
-                <span id="sunday" class="day">SUN</span>
+                <span id="day-1" class="day">MON</span>
+                <span id="day-2" class="day">TUE</span>
+                <span id="day-3" class="day">WED</span>
+                <span id="day-4" class="day">THU</span>
+                <span id="day-5" class="day">FRI</span>
+                <span id="day-6" class="day">SAT</span>
+                <span id="day-0" class="day">SUN</span>
             </div>
         <div class="meridiem">
             <div id ="meridiemAMPM">
@@ -187,8 +187,11 @@
                 </select>
                 <button type="setButton" class="saveAlarm">Set Alarm!</button>
                 <button type="stopButton" class="stopAlarm">Stop Alarm!</button>
+                <div id="alarmKeeper">Your alarms!
+                    <button id="cancelAlarm">X</button>
+                </div>
             </div>
         </div>
     </form>
-    <div id="alarmSaves">Your alarms!</div>
+
 </body>

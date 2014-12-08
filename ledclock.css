@@ -12,34 +12,40 @@
 .bodyclock {
     background-color: lightblue;
 }
+
 #clock .display {
     text-align: center;
-    padding: 20px 20px 20px;
+    padding: 22px 35px 19px;
     border-radius: 6px;
-    position: relative;
     margin-left: auto;
     margin-right: auto;
     background-color: lightgray;
-    width: 375px;
-    height: 100px;
-    -webkit-box-shadow: 0 0 11px 0px #000 inset;
+    width: 362px;
+    height: 115px;
+    -webkit-box-shadow: 0 0 11px 0 #000 inset;
 }
 
 #clock .meridiem div {
-    width: 10px;
-    height: 10px;
+    width: 18px;
+    height: 17px;
     position: relative;
     float: right;
-    margin-top: 40px;
-    margin-right: 10px;
-    margin-left: -20px;
     font-family: monospace;
     font-size: 15px;
 }
 
+.meridiem {
+    float: right;
+    width: 18px;
+    height: 17px;
+    position: relative;
+    margin-top: 45px;
+    left: -5px;
+}
+
 .alarmicon {
     position: absolute;
-    margin-top: 37px;
+    margin-top: 45px;
     text-align: center;
     width: 18px;
     height: 18px;
@@ -59,7 +65,7 @@
     font-family: monospace;
     padding: 0 0 18px 0;
     padding-top: 3px;
-    width: 375px;
+    width: 365px;
     align-content: center;
 }
 
@@ -68,7 +74,20 @@
     color: darkgray;
 }
 
-/*.l1:before{	border-width:0 5px 5px 0;border-right-color:inherit;left:-5px;}*/
+.today {
+    color: black;
+    font-weight: bold;
+}
+
+#clock .digits div {
+    text-align: left;
+    position: relative;
+    width: 28px;
+    height: 59px;
+    display: inline-block;
+    top: 2px;
+    right: -11px;
+}
 
 #clock .digits div span:before,
 #clock .digits div span:after{
@@ -81,131 +100,157 @@
 
 #clock .digits .l1 {
     height: 5px;
-    width: 15px;
+    width: 16px;
     top: 0;
-    left: 5px;
+    left: 6px;
     border-width: 0 0 5px 5px;
 }
 
-#clock .digits .l1::before{
-    border-width:0 5px 5px 0;
-    border-right-color:inherit;
-    left:-5px;
-}
-
-#clock .digits .l1::after{
-    border-width:0 0 5px 5px;
-    border-left-color:inherit;
-    right:-5px;
-}
-
-#clock .digits .l2 {
-    height: 5px;
-    width: 15px;
-    top: 24px;
-    left: 5px;
-}
-
-#clock .digits .l2::before{
-    border-width: 3px 5px 2px 0;
+#clock .digits .l1::before {
+    border-width: 0 5px 5px 0;
     border-right-color: inherit;
     left: -5px;
 }
 
-#clock .digits .l2::after{
-    border-width: 2px 1px 3px 4px;
+#clock .digits .l1::after {
+    border-width: 0 0 5px 5px;
     border-left-color: inherit;
     right: -5px;
 }
 
-#clock .digits .l3 {
+#clock .digits .l2 {
     height: 5px;
-    width: 15px;
-    top: 48px;
+    width: 18px;
+    top: 27px;
     left: 5px;
 }
 
-#clock .digits .l3::before{
-    border-width:5px 5px 0 0;
-    border-right-color:inherit;
-    left:-5px;
+#clock .digits .l2::before {
+    border-width: 3px 4px 2px 1px;
+    border-right-color: inherit;
+    left: -5px;
 }
 
-#clock .digits .l3::after{
+#clock .digits .l2::after {
+    border-width: 3px 4px 2px;
+    border-left-color: inherit;
+    right: -8px;
+}
+
+#clock .digits .l3 {
+    height: 5px;
+    width: 16px;
+    top: 54px;
+    left: 6px;
+}
+
+#clock .digits .l3::before {
+    border-width: 5px 5px 0 0;
+    border-right-color: inherit;
+    left: -5px;
+}
+
+#clock .digits .l3::after {
     border-width: 5px 0 0 5px;
-    border-left-color:inherit;
-    right:-5px;
+    border-left-color: inherit;
+    right: -5px;
 }
 
 #clock .digits .l4 {
     height: 17px;
     width: 5px;
-    top: 6px;
-    left: 0px;
+    top: 7px;
 }
 
-#clock .digits .l4::before{
+#clock .digits .l4::before {
+    border-width: 5px 0 0 5px;
+    border-left-color: inherit;
+    top: -5px;
+}
+
+#clock .digits .l4::after {
     border-width: 5px 5px 0 0;
     border-top-color: inherit;
     top: 17px;
     left: 0;
 }
 
-#clock .digits .l4::after{
-    border-width: 5px 0 0 5px;
-    border-left-color: inherit;
-    top: -5px;
-}
-
 #clock .digits .l5 {
     height: 17px;
     width: 5px;
-    top: 6px;
+    top: 7px;
     right: 0px;
+}
+
+#clock .digits .l5::before {
+    border-width: 5px 5px 0 0;
+    border-right-color: inherit;
+    top: -5px;
+}
+
+#clock .digits .l5::after {
+    border-width: 5px 0px 0px 5px;
+    border-top-color: inherit;
+    top: 17px;
+    left: 0;
 }
 
 #clock .digits .l6 {
     height: 17px;
     width: 5px;
-    top: 29px;
-    left: 0px;
+    top: 35px;
+}
+
+#clock .digits .l6::before {
+    border-width: 5px 0 0 5px;
+    border-left-color: inherit;
+    top: -5px;
+}
+
+#clock .digits .l6::after {
+    border-width: 5px 5px 0 0;
+    border-top-color: inherit;
+    top: 17px;
 }
 
 #clock .digits .l7 {
-    height: 18px;
-    width: 4px;
-    top: 29px;
+    height: 17px;
+    width: 5px;
+    top: 35px;
     right: 0px;
 }
 
-#clock .digits div {
-    text-align: left;
-    position: relative;
-    width: 25px;
-    height: 52px;
-    display: inline-block;
-    margin: 0 4px;
+#clock .digits .l7::before {
+    border-width: 5px 5px 0 0;
+    border-right-color: inherit;
+    top: -5px;
+}
+
+#clock .digits .l7::after {
+    border-width: 5px 0 0 5px;
+    border-top-color: inherit;
+    top: 17px;
 }
 
 #clock .digits .c1 {
     height: 4px;
     width: 4px;
-    top: 6px;
-    right:0px;
+    top: 13px;
+    left: 11px;
 }
 
 #clock .digits .c2 {
     height: 4px;
     width: 4px;
-    top: 30px;
-    right:0px;
+    top: 36px;
+    left: 11px;
 }
 
 .alarmDiv {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    width: 386px;
+    width: 379px;
     padding: 10px;
     background-color: black;
     border-radius: 10px;
@@ -218,6 +263,17 @@
 .saveAlarm {
     padding: 6px;
 }
+
+#alarmKeeper {
+    width: 369px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    text-align: center;
+    font-family: monospace;
+    padding: 5px;
+    margin-top: 8px;
+}
+
 
 .stopAlarm {
     padding: 6px;

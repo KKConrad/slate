@@ -8,6 +8,23 @@ function setDigit(position, digit) {
     divDigit.addClass(digitClass);
 }
 
+function setDay(dow) {
+    var daySelector = "#day-" + dow;
+    var divDay = $(daySelector);
+    $('span.day').removeClass('today');
+    divDay.addClass('today');
+}
+
+function setAM(){
+    $('#AMPM').html("AM");
+    return 'yay';
+}
+
+function setPM(){
+    $('#AMPM').html("PM");
+    return 'woo';
+}
+
 $ ( function (){
     updateTime();
     $(".chosen-select").chosen({max_selected_options: 5});
@@ -23,6 +40,7 @@ $ ( function (){
         console.log('clicked!');
         userAlarmTime.push(getUserAlarm());
         $('#alarmicon').removeClass('fa-bell-slash-o').addClass('fa-bell-o');
+        renderAlarms();
         return false;
     });
 });
@@ -38,18 +56,7 @@ function renderAlarms() {
     });
     html += "</ul>";
 
-    $('#alarmSaves').html(html);
-}
-
-
-function setAM(){
-    $('#AMPM').html("AM");
-    return 'yay';
-}
-
-function setPM(){
-    $('#AMPM').html("PM");
-    return 'woo';
+    $('#alarmKeeper').html(html);
 }
 
 function updateTime() {
@@ -64,6 +71,8 @@ function updateTime() {
                 $('#alarmSound').get(0).play();
             }
         }
+
+    setDay(moment().day());
 }
 
 
@@ -86,7 +95,10 @@ function getUserAlarm() {
     var userMeridiem = $('#alarmMeridiem').val();
 
     var alarmTime = userHour + userMinute + "00" + " " + userMeridiem;
-
+    if (userHour === "" || userMinute === "" || userMeridiem === "") {
+        alert('Please put in a completed alarm time, thanks! :D ');
+        removeClass('a-bell-slash-o');
+    }
     return alarmTime;
 }
 
