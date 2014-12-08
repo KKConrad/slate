@@ -81,6 +81,7 @@ function updateTime() {
         for (i=0; i < userAlarmTime.length; i++) {
             if (now === userAlarmTime[i].momentTime) {
                 $('#alarmSound').get(0).play();
+                alert("BEEP BEEP BEEP!")
             }
         }
 
@@ -118,10 +119,6 @@ function getUserAlarm() {
     };
 
     return objectTime;
-}
-
-function setAlarm() {
-    $('#')
 }
 
 // if now is equal to alarm time, pop an alert box
