@@ -311,6 +311,15 @@ ul {
     user-select: none;
 }
 
+.chosen-container-single .chosen-single span {
+    display: block;
+    overflow: hidden;
+    margin-right: 26px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 11px;
+}
+
 /*num-0*/
 #clock .digits div.num-0 .l1,
 #clock .digits div.num-0 .l3,
