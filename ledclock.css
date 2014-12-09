@@ -90,7 +90,7 @@ ul {
     background-color: lightgrey;
     border-radius: 10px;
     margin: 10px;
-    width: 225px;
+    width: 250px;
     text-align: right;
     margin-left: 70px;
 }
@@ -270,7 +270,7 @@ ul {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    width: 379px;
+    width: 400px;
     padding: 10px;
     background-color: black;
     border-radius: 10px;
@@ -285,7 +285,7 @@ ul {
 }
 
 #alarmKeeper {
-    width: 369px;
+    width: 391px;
     background-color: aliceblue;
     border-radius: 8px;
     text-align: center;
@@ -297,6 +297,18 @@ ul {
 
 .stopAlarm {
     padding: 6px;
+}
+
+.chosen-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    zoom: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    padding-left: 5px;
 }
 
 /*num-0*/
