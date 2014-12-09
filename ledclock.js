@@ -101,7 +101,6 @@ function getUserAlarm() {
         momentTime: alarmTime,
         humanizedTime: peopleTime
     };
-
     return objectTime;
 }
 
