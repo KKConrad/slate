@@ -285,6 +285,11 @@ ul {
     font-size: 11px;
 }
 
+.stopAlarm {
+    padding: 6px;
+    font-size: 11;
+}
+
 #alarmKeeper {
     width: 371px;
     background-color: aliceblue;
@@ -295,10 +300,6 @@ ul {
     padding: 5px;
     margin-top: 8px;
     padding-top: 16px;
-}
-
-.stopAlarm {
-    padding: 6px;
 }
 
 .chosen-container {
