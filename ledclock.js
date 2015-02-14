@@ -25,8 +25,8 @@ function setPM(){
     return 'woo';
 }
 
-var ampm = $('#AMPM');
-var userAlarmTime = [];
+var ampm;
+var userAlarmTime;
 
 function renderAlarms() {
     var html;
@@ -104,7 +104,8 @@ function getUserAlarm() {
     return objectTime;
 }
 
-$ ( function (){
+$(function (){
+    ampm = $('#AMPM');
     if (localStorage.getItem('objectAlarm') == null) {
         userAlarmTime = [];
     } else {
