@@ -282,12 +282,14 @@ ul {
 
 .saveAlarm {
     padding: 6px;
-    font-size: 10px;
+    font-size: 11px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .stopAlarm {
     padding: 6px;
-    font-size: 10px;
+    font-size: 11px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #alarmKeeper {
